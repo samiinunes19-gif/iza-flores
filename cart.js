@@ -462,25 +462,23 @@ window.addToCart = function() {
 
 // ═══════════════════════════════════════════════════════════════
 //  COMPRA RÁPIDA — botão "Comprar agora" do card.
-//  Adiciona direto ao carrinho (sem abrir a descrição) e abre o carrinho.
+//  Abre os ADICIONAIS/CARTINHAS (modal) e, ao adicionar, vem o UPSELL —
+//  exatamente o mesmo fluxo do botão "Adicionar ao Carrinho" da página
+//  do produto. (Sem abrir a descrição inteira.)
 //  Clicar SOBRE o produto continua abrindo a descrição (openDetail).
 // ═══════════════════════════════════════════════════════════════
 window.quickBuy = function(id) {
   const p = (window.allProducts || []).find(x => x.id === id);
   if (!p) return;
 
-  // Camisetas exigem personalização (foto/cor/tamanho) → abre a página do produto
-  if (p.is_tshirt) {
+  // Camisetas e anéis exigem personalização na página → abre o detalhe
+  if (p.is_tshirt || p.is_alliance) {
     if (typeof openDetail === 'function') openDetail(id);
     return;
   }
 
-  const price = parseFloat(p.price || 0);
-  CART.currentProduct = p;
-  CART.items.push({ product: p, qty: 1, obs: '', totalPrice: price });
-  updateCartBadge();
-  // Abre o upsell ("Que tal alguns adicionais?") — igual ao fluxo normal
-  setTimeout(() => openUpsellModal(), 200);
+  // Demais produtos: modal de adicionais/cartinhas → ao adicionar, abre o upsell.
+  if (typeof openProductModal === 'function') openProductModal(id);
 };
 
 // ═══════════════════════════════════════════════════════════════
