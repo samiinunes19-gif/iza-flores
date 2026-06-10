@@ -1,0 +1,9 @@
+{
+  "name": "monalisa-flores",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site Monalisa Flores + funções serverless (MasterPag PIX)",
+  "engines": {
+    "node": ">=18"
+  }
+}

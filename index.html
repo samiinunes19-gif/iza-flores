@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<!-- ============================================================= -->
+<!--  METADADOS — PERSONALIZE ESTE BLOCO EM CADA SITE (escala lateral)
+     Para não "cruzar dados" no Google, troque em cada clone:
+       • BRAND  = nome da loja          (ex.: Iza Flores e Amores)
+       • DOMAIN = domínio do site        (ex.: https://izafloreseamor.site)
+       • title / description / keywords  (reescreva, não copie igual)
+       • og:url e og:image (use o domínio do clone)
+     NÃO repita o mesmo título/descrição entre os sites.            -->
+<!-- ============================================================= -->
+
+<title>Iza Flores e Amores | Floricultura Online com Entrega no Mesmo Dia</title>
+<meta name="description" content="Iza Flores e Amores: floricultura online com buquês de rosas, cestas de café da manhã, flores e presentes. Entrega expressa no mesmo dia em todo o Brasil. Peça já!">
+<meta name="keywords" content="floricultura online, buquê de rosas, cesta de café da manhã, entrega de flores, flores online, presentes, dia dos namorados">
+<meta name="author" content="Iza Flores e Amores">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#e91e8c">
+<link rel="canonical" href="https://izafloreseamor.site/">
+
+<!-- Open Graph (Facebook / WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Iza Flores e Amores">
+<meta property="og:title" content="Iza Flores e Amores | Flores e Presentes com Entrega no Mesmo Dia">
+<meta property="og:description" content="Buquês, cestas e arranjos com entrega rápida em todo o Brasil. Surpreenda quem você ama hoje mesmo.">
+<meta property="og:url" content="https://izafloreseamor.site/">
+<meta property="og:image" content="https://izafloreseamor.site/banner-hero.png">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Iza Flores e Amores | Floricultura Online">
+<meta name="twitter:description" content="Flores, cestas e presentes com entrega no mesmo dia em todo o Brasil.">
+<meta name="twitter:image" content="https://izafloreseamor.site/banner-hero.png">
+
+<!-- Favicon inline (sem arquivo externo, evita 404 e footprint compartilhado) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%8C%B7%3C/text%3E%3C/svg%3E">
+
+<!-- Dados estruturados (cada clone fica único pela troca de name/url) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Florist",
+  "name": "Iza Flores e Amores",
+  "description": "Floricultura online com entrega de flores, buquês, cestas e presentes no mesmo dia em todo o Brasil.",
+  "url": "https://izafloreseamor.site/",
+  "image": "https://izafloreseamor.site/banner-hero.png",
+  "priceRange": "$$",
+  "areaServed": "BR"
+}
+</script>
+
+<link rel="stylesheet" href="style.css?v=20">
+</head>
+<body>
+<!-- Alternador de visualização PC / Celular -->
+<div class="view-switch" id="viewSwitch">
+  <button id="viewPc" type="button" title="Ver como PC (Desktop)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    <span>PC</span>
+  </button>
+  <button id="viewMobile" type="button" class="active" title="Ver como Celular (Mobile)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+    <span>Celular</span>
+  </button>
+</div>
+<!-- Barra de busca global — fixed, visível em qualquer página -->
+<div class="search-bar hidden" id="searchBar">
+  <input type="text" placeholder="Buscar flores, cestas, presentes..." autocomplete="off" spellcheck="false">
+  <button class="search-close">&#x2715;</button>
+</div>
+<div class="overlay" id="overlay"></div>
+<nav class="side-menu" id="sideMenu">
+  <div class="sm-label" style="padding-top:22px;">CATEGORIAS</div>
+  <div id="smCats"></div>
+</nav>
+
+<div class="page active" id="homePage">
+
+  <header class="header">
+    <button class="hbtn" id="menuBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="#" class="header-logo">Iza&nbsp;<span>Flores</span>&nbsp;e&nbsp;Amores</a>
+    <div class="header-actions">
+      <button class="hbtn" id="searchBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="hbtn" id="cartBtn" aria-label="Carrinho" onclick="openCartSheet()" style="position:relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span id="cartBadge" style="position:absolute;top:-6px;right:-6px;background:#e91e8c;color:white;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center">0</span></button>
+    </div>
+  </header>
+
+
+  <div class="region-bar">
+    <span class="region-bar-icon"></span>
+    Entregamos hoje em sua região!
+  </div>
+
+  <section class="hero-carousel" id="heroCarousel">
+    <div class="hero-carousel-track" id="heroTrack">
+      <div class="hero-carousel-slide">
+        <img src="banner-hero.png" alt="12 de Junho Dia dos Namorados - Iza Flores e Amores" class="hero-carousel-img">
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="banner-hero-2.png" alt="Cestas de Café da Manhã Especial" class="hero-carousel-img">
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="banner-hero-3.png" alt="O melhor Presente para Namorados" class="hero-carousel-img">
+      </div>
+    </div>
+    <div class="hero-carousel-dots" id="heroDots">
+      <span class="hero-dot active" onclick="setHeroSlide(0)"></span>
+      <span class="hero-dot" onclick="setHeroSlide(1)"></span>
+      <span class="hero-dot" onclick="setHeroSlide(2)"></span>
+    </div>
+  </section>
+
+  <section class="cats">
+    <div class="cats-scroll" id="catScroll"></div>
+  </section>
+
+  <div id="dynamicSections"></div>
+
+  <div class="feats">
+    <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="feat-lbl">Entrega<br>Rápida</span></div>
+    <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span class="feat-lbl">Frete<br>Grátis</span></div>
+    <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span class="feat-lbl">3x Sem<br>Juros</span></div>
+    <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="feat-lbl">Compra<br>Segura</span></div>
+  </div>
+
+  <div class="promo"><h3>&#127800; ENTREGA NO MESMO DIA</h3><p>Peça até hoje e receba hoje em sua cidade</p></div>
+
+  <div class="tags-sec">
+    <div class="tags-ttl">Termos Populares</div>
+    <div class="tags-wrap">
+      <span class="tag">Floricultura Ribeirão Preto</span>
+      <span class="tag">Cesta de Café da Manhã</span>
+      <span class="tag">Cesta de Chocolate</span>
+      <span class="tag">Urso de Pelúcia</span>
+      <span class="tag">Floricultura Manaus</span>
+      <span class="tag">Orquídeas</span>
+      <span class="tag">Rosas Brancas</span>
+      <span class="tag">Floricultura Brasília</span>
+      <span class="tag">Arranjo de Flores</span>
+      <span class="tag">Floricultura Curitiba</span>
+      <span class="tag">Floricultura Porto Alegre</span>
+      <span class="tag">Floricultura Osasco</span>
+      <span class="tag">Buquê de Rosas Vermelhas</span>
+      <!-- Extra tags hidden by default -->
+      <span class="tag tag-extra hidden">Floricultura Belo Horizonte</span>
+      <span class="tag tag-extra hidden">Floricultura Salvador</span>
+      <span class="tag tag-extra hidden">Floricultura Fortaleza</span>
+      <span class="tag tag-extra hidden">Floricultura Goiânia</span>
+      <span class="tag tag-extra hidden">Floricultura Recife</span>
+      <span class="tag tag-extra hidden">Floricultura Campinas</span>
+      <span class="tag tag-extra hidden">Floricultura São Luís</span>
+      <span class="tag tag-extra hidden">Floricultura Maceió</span>
+      <span class="tag tag-extra hidden">Floricultura Natal</span>
+      <span class="tag tag-extra hidden">Floricultura João Pessoa</span>
+      <span class="tag tag-extra hidden">Floricultura Teresina</span>
+      <span class="tag tag-extra hidden">Floricultura Santos</span>
+      <span class="tag tag-extra hidden">Floricultura São José dos Campos</span>
+      <span class="tag tag-extra hidden">Floricultura Niterói</span>
+      <span class="tag tag-extra hidden">Floricultura Joinville</span>
+      <span class="tag tag-extra hidden">Floricultura Londrina</span>
+      <span class="tag tag-extra hidden">Floricultura Caxias do Sul</span>
+    </div>
+    <span class="tags-more" id="btnTagsMore">Ver mais</span>
+  </div>
+
+  <div class="palavras">
+    <div class="palavras-ttl">Palavras Mais Buscadas</div>
+    <div class="palavras-grid">
+      <div class="pcol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg><a href="#">Floricultura Curitiba</a><a href="#">Floricultura Goiânia</a><a href="#">Floricultura BH</a><a href="#">Floricultura Fortaleza</a><a href="#">Floricultura Campinas</a></div>
+      <div class="pcol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg><a href="#">Floricultura SP</a><a href="#">Floricultura Blumenau</a><a href="#">Floricultura Caxias do Sul</a><a href="#">Floricultura RJ</a><a href="#">Floricultura Sorocaba</a></div>
+      <div class="pcol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg><a href="#">Floricultura Canoas</a><a href="#">Floricultura Araraquara</a><a href="#">Floricultura Salvador</a><a href="#">Floricultura Ribeirão Preto</a><a href="#">Rosas</a></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span class="foot-logo">iza flores e amores</span>
+    <div class="foot-row"><a href="#" id="btnCidadesAtendidas">Confira as Cidades Atendidas</a></div>
+    <div class="foot-row"><a href="#">Termos de Uso</a><span class="s">•</span><a href="#">Devoluções e Reembolsos</a><span class="s">•</span><a href="#">SAC</a></div>
+    <div class="foot-row"><a href="#">Quem Somos</a><span class="s">•</span><a href="#">Política de Privacidade</a><span class="s">•</span><a href="#">Política de Cookies</a></div>
+    <div class="foot-row"><a href="#">Corporativo</a></div>
+    <div class="foot-socials">
+      <a href="#" class="soc" style="background:#1877f2"><svg viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="#" class="soc" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"><svg viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="white" stroke-width="1.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/></svg></a>
+      <a href="#" class="soc" style="background:#111"><svg viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25z"/></svg></a>
+      <a href="#" class="soc" style="background:#25d366"><svg viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+    </div>
+    <div class="foot-copy">© 2026 Iza Flores e Amores. Todos os direitos reservados.</div>
+  </footer>
+</div>
+
+<div class="page" id="detailPage">
+  <div class="det-bar">
+    <button class="det-back" id="backBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <span class="det-bar-title">Detalhes do Produto</span>
+  </div>
+  <img class="det-img" id="detImg" src="" alt="">
+  <div class="det-body">
+    <div id="detRatingRow" style="display:none"><span class="det-stars" id="detStars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="det-rcount" id="detCount"></span></div>
+    <div class="det-name" id="detName"></div>
+    <div class="det-old" id="detOldPrice" style="display:none;font-size:12px;color:#aaa;text-decoration:line-through;margin-bottom:2px;"></div>
+    <div class="det-price" id="detPrice"></div>
+    <div class="det-desc" id="detDesc"></div>
+    <div class="det-ship" id="detShip"></div>
+    <div id="detTshirtCustomizer" style="margin-bottom: 20px; display: none;"></div>
+    <div id="detAllianceCustomizer" style="margin-bottom: 20px; display: none;"></div>
+    <button class="btn-cart" id="detAddCart">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+<div class="page" id="categoryPage">
+  <div class="cat-page-bar">
+    <button class="cat-page-back" id="catBackBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <span class="cat-page-title" id="catPageTitle"></span>
+  </div>
+  <div class="cat-page-count" id="catPageCount"></div>
+  <div class="cat-page-grid" id="catPageGrid"></div>
+</div>
+
+<!-- CIDADES ATENDIDAS MODAL (Google SEO e verificação do usuário) -->
+<div class="cidades-modal hidden" id="cidadesModal">
+  <div class="cidades-modal-content">
+    <div class="cidades-modal-hdr">
+      <h3>Cidades Atendidas</h3>
+      <button class="cidades-modal-close" id="btnCidadesClose">&times;</button>
+    </div>
+    <p class="cidades-modal-intro">
+      Entregamos buquês, cestas e arranjos no mesmo dia em todo o Brasil. Como um marketplace líder, conectamos você às melhores floriculturas locais selecionadas de cada região para garantir flores frescas e entrega expressa rápida!
+    </p>
+    <div class="cidades-search-box">
+      <input type="text" id="cidadesSearchInput" placeholder="Busque sua cidade (ex: Campinas)...">
+    </div>
+    <div class="cidades-list-container" id="cidadesListContainer">
+      <div class="cidades-state-group" data-state="São Paulo">
+        <h4>São Paulo (SP)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">São Paulo</span><span class="cidade-item">Campinas</span><span class="cidade-item">Guarulhos</span><span class="cidade-item">São Bernardo do Campo</span>
+          <span class="cidade-item">Santo André</span><span class="cidade-item">Osasco</span><span class="cidade-item">Ribeirão Preto</span><span class="cidade-item">Sorocaba</span>
+          <span class="cidade-item">Santos</span><span class="cidade-item">São José dos Campos</span><span class="cidade-item">Mogi das Cruzes</span><span class="cidade-item">Jundiaí</span>
+          <span class="cidade-item">Piracicaba</span><span class="cidade-item">Bauru</span><span class="cidade-item">São Vicente</span><span class="cidade-item">Itaquaquecetuba</span>
+          <span class="cidade-item">Carapicuíba</span><span class="cidade-item">Franca</span><span class="cidade-item">Taubaté</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Rio de Janeiro">
+        <h4>Rio de Janeiro (RJ)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Rio de Janeiro</span><span class="cidade-item">Niterói</span><span class="cidade-item">Duque de Caxias</span><span class="cidade-item">Nova Iguaçu</span>
+          <span class="cidade-item">São Gonçalo</span><span class="cidade-item">Petrópolis</span><span class="cidade-item">Campos dos Goytacazes</span><span class="cidade-item">Volta Redonda</span>
+          <span class="cidade-item">Cabo Frio</span><span class="cidade-item">Belford Roxo</span><span class="cidade-item">Angra dos Reis</span><span class="cidade-item">Nova Friburgo</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Minas Gerais">
+        <h4>Minas Gerais (MG)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Belo Horizonte</span><span class="cidade-item">Uberlândia</span><span class="cidade-item">Contagem</span><span class="cidade-item">Juiz de Fora</span>
+          <span class="cidade-item">Betim</span><span class="cidade-item">Montes Claros</span><span class="cidade-item">Ribeirão das Neves</span><span class="cidade-item">Uberaba</span>
+          <span class="cidade-item">Governador Valadares</span><span class="cidade-item">Ipatinga</span><span class="cidade-item">Sete Lagoas</span><span class="cidade-item">Divinópolis</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Paraná">
+        <h4>Paraná (PR)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Curitiba</span><span class="cidade-item">Londrina</span><span class="cidade-item">Maringá</span><span class="cidade-item">Ponta Grossa</span>
+          <span class="cidade-item">Cascavel</span><span class="cidade-item">São José dos Pinhais</span><span class="cidade-item">Foz do Iguaçu</span><span class="cidade-item">Colombo</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Rio Grande do Sul">
+        <h4>Rio Grande do Sul (RS)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Porto Alegre</span><span class="cidade-item">Caxias do Sul</span><span class="cidade-item">Canoas</span><span class="cidade-item">Pelotas</span>
+          <span class="cidade-item">Santa Maria</span><span class="cidade-item">Gravataí</span><span class="cidade-item">Viamão</span><span class="cidade-item">Novo Hamburgo</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Santa Catarina">
+        <h4>Santa Catarina (SC)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Florianópolis</span><span class="cidade-item">Joinville</span><span class="cidade-item">Blumenau</span><span class="cidade-item">São José</span>
+          <span class="cidade-item">Chapecó</span><span class="cidade-item">Criciúma</span><span class="cidade-item">Itajaí</span><span class="cidade-item">Palhoça</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Bahia">
+        <h4>Bahia (BA)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Salvador</span><span class="cidade-item">Feira de Santana</span><span class="cidade-item">Vitória da Conquista</span><span class="cidade-item">Camaçari</span>
+          <span class="cidade-item">Itabuna</span><span class="cidade-item">Juazeiro</span><span class="cidade-item">Ilhéus</span><span class="cidade-item">Lauro de Freitas</span>
+        </div>
+      </div>
+      <div class="cidades-state-group" data-state="Outras Regiões e Capitais">
+        <h4>Outras Capitais e Regiões (Norte, Nordeste, Centro-Oeste)</h4>
+        <div class="cidades-grid">
+          <span class="cidade-item">Brasília (DF)</span><span class="cidade-item">Fortaleza (CE)</span><span class="cidade-item">Recife (PE)</span><span class="cidade-item">Manaus (AM)</span>
+          <span class="cidade-item">Goiânia (GO)</span><span class="cidade-item">Belém (PA)</span><span class="cidade-item">São Luís (MA)</span><span class="cidade-item">Maceió (AL)</span>
+          <span class="cidade-item">Natal (RN)</span><span class="cidade-item">João Pessoa (PB)</span><span class="cidade-item">Teresina (PI)</span><span class="cidade-item">Aracaju (SE)</span>
+          <span class="cidade-item">Campo Grande (MS)</span><span class="cidade-item">Cuiabá (MT)</span><span class="cidade-item">Porto Velho (RO)</span><span class="cidade-item">Macapá (AP)</span>
+          <span class="cidade-item">Rio Branco (AC)</span><span class="cidade-item">Boa Vista (RR)</span><span class="cidade-item">Palmas (TO)</span><span class="cidade-item">Anápolis (GO)</span>
+          <span class="cidade-item">Aparecida de Goiânia (GO)</span><span class="cidade-item">Cariacica (ES)</span><span class="cidade-item">Vila Velha (ES)</span><span class="cidade-item">Vitória (ES)</span>
+          <span class="cidade-item">Serra (ES)</span><span class="cidade-item">Jaboatão dos Guararapes (PE)</span><span class="cidade-item">Olinda (PE)</span><span class="cidade-item">Caruaru (PE)</span>
+          <span class="cidade-item">Campina Grande (PB)</span><span class="cidade-item">Mossoró (RN)</span><span class="cidade-item">Caucaia (CE)</span><span class="cidade-item">Juazeiro do Norte (CE)</span>
+          <span class="cidade-item">Imperatriz (MA)</span><span class="cidade-item">Ananindeua (PA)</span><span class="cidade-item">Santarém (PA)</span><span class="cidade-item">Várzea Grande (MT)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cookie" id="cookieBanner">
+  <p>Iza Flores e Amores e os cookies: Nós usamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <a href="#">Política de Privacidade</a> e <a href="#">Política de Cookies</a>.</p>
+  <button class="cookie-btn" id="cookieBtn">Continuar e Fechar</button>
+</div>
+
+<!-- Indicador flutuante "Loja aberta" — segue o cliente pela página -->
+<div class="open-float" id="openFloat" title="Estamos abertos agora!">
+  <span class="open-float-dot"></span>
+  <span class="open-float-txt">Loja aberta</span>
+</div>
+
+<script src="products-data.js?v=2"></script>
+<script src="extra-products.js?v=12"></script>
+<script src="script.js?v=10"></script>
+<script src="cart.js?v=16"></script>
+<script src="view-toggle.js"></script>
+<script src="drag-scroll.js"></script>
+</body>
+</html>
