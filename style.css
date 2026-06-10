@@ -3,6 +3,14 @@
 body{font-family:'DM Sans',sans-serif;background:#fff;max-width:430px;margin:0 auto;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-size:15px;line-height:1.5;}
 :root{--pink:#e91e8c;--bg:#ffffff;--text:#1a1a2e;--gray:#f4f6f8;--border:#e8e8e8;--star:#f5a623;}
 
+/* iOS: impedir zoom automático — duplo-toque e ao focar campos.
+   touch-action: manipulation mata o zoom de duplo-toque;
+   campos com 16px impedem o iOS de dar zoom ao focar (sem mexer no viewport,
+   pra não prejudicar a acessibilidade/Google). */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+body{touch-action:manipulation;}
+input,textarea,select{font-size:16px !important;}
+
 /* OVERLAY & MENU */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;opacity:0;pointer-events:none;transition:opacity .25s;}
 .overlay.open{opacity:1;pointer-events:all;}
