@@ -1160,6 +1160,25 @@ function openCheckout() {
             </button>
           </div>
           <div class="co-pix-info">O código PIX expira em 30 minutos. A confirmação do pagamento é automática.</div>
+
+          <div class="co-trust">
+            <div class="co-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span>SSL<b>256-bit</b></span>
+            </div>
+            <div class="co-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              <span>Compra<b>Garantida</b></span>
+            </div>
+            <div class="co-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="12" cy="16" r="1.4"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span>Dados<b>Criptografados</b></span>
+            </div>
+          </div>
+          <div class="co-secure-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Pagamento processado em ambiente 100% seguro e protegido
+          </div>
         </div>
       </div>
 
@@ -1442,8 +1461,8 @@ async function showPixScreen() {
 
   const codeEl = document.getElementById('coPixCode');
   const qr = document.getElementById('coQRCode');
-  if (codeEl) codeEl.textContent = 'Gerando código PIX...';
-  if (qr) qr.innerHTML = '';
+  if (codeEl) codeEl.textContent = 'Gerando seu código PIX seguro...';
+  if (qr) qr.innerHTML = '<div class="co-pix-loading"><div class="co-spinner"></div><span>Gerando PIX em ambiente seguro...</span></div>';
 
   const base = (window.PIX_API_BASE || '');
   const d = window._coData || {};
@@ -2113,6 +2132,19 @@ window.sendWhatsApp = function() {
   background:#f8f9fb;padding:12px;
   border-radius:8px;line-height:1.6;text-align:left;
 }
+/* Loading do PIX (deixa o delay profissional) */
+.co-pix-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;height:100%;padding:18px}
+.co-spinner{width:38px;height:38px;border:3px solid #e6f4ec;border-top-color:#16a34a;border-radius:50%;animation:coSpin .8s linear infinite}
+.co-pix-loading span{font-size:11px;color:#16a34a;font-weight:600;text-align:center}
+@keyframes coSpin{to{transform:rotate(360deg)}}
+/* Selos de confiança / segurança */
+.co-trust{display:flex;justify-content:center;gap:8px;margin:0 18px 14px;padding-top:14px;border-top:1px solid #eef0f4}
+.co-trust-item{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:100px;color:#16a34a}
+.co-trust-item svg{width:22px;height:22px}
+.co-trust-item span{font-size:8.5px;color:#9ca3af;line-height:1.35;text-transform:uppercase;letter-spacing:.3px;text-align:center;font-weight:700}
+.co-trust-item span b{display:block;color:#16a34a;font-weight:800;font-size:9.5px}
+.co-secure-note{display:flex;align-items:center;justify-content:center;gap:7px;margin:0 18px 20px;font-size:11px;color:#16a34a;font-weight:600;text-align:center;line-height:1.4}
+.co-secure-note svg{width:15px;height:15px;flex-shrink:0}
 .co-wpp-btn{
   margin:0 18px;display:flex;align-items:center;
   justify-content:center;gap:10px;

@@ -7,6 +7,15 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
+<!-- Performance 4G: conexões antecipadas + pré-carregar o banner principal (LCP) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://static.giulianaflores.com.br">
+<link rel="dns-prefetch" href="https://www.isabelaflores.com">
+<link rel="dns-prefetch" href="https://cdn.shopify.com">
+<link rel="dns-prefetch" href="https://acdn-us.mitiendanube.com">
+<link rel="preload" as="image" href="banner-hero.jpg" fetchpriority="high">
+
 <!-- ============================================================= -->
 <!--  METADADOS — PERSONALIZE ESTE BLOCO EM CADA SITE (escala lateral)
      Para não "cruzar dados" no Google, troque em cada clone:
@@ -108,13 +117,13 @@
   <section class="hero-carousel" id="heroCarousel">
     <div class="hero-carousel-track" id="heroTrack">
       <div class="hero-carousel-slide">
-        <img src="banner-hero.png" alt="12 de Junho Dia dos Namorados - Iza Flores e Amores" class="hero-carousel-img">
+        <img src="banner-hero.jpg" alt="Dia dos Namorados - Iza Flores e Amores" class="hero-carousel-img" width="1024" height="466" fetchpriority="high" decoding="async">
       </div>
       <div class="hero-carousel-slide">
-        <img src="banner-hero-2.png" alt="Cestas de Café da Manhã Especial" class="hero-carousel-img">
+        <img src="banner-hero-2.jpg" alt="Cestas de Café da Manhã Especial" class="hero-carousel-img" width="1024" height="492" loading="lazy" decoding="async">
       </div>
       <div class="hero-carousel-slide">
-        <img src="banner-hero-3.png" alt="O melhor Presente para Namorados" class="hero-carousel-img">
+        <img src="banner-hero-3.jpg" alt="O melhor Presente para Namorados" class="hero-carousel-img" width="1024" height="473" loading="lazy" decoding="async">
       </div>
     </div>
     <div class="hero-carousel-dots" id="heroDots">
@@ -332,7 +341,7 @@
 <script src="products-data.js?v=2"></script>
 <script src="extra-products.js?v=12"></script>
 <script src="script.js?v=10"></script>
-<script src="cart.js?v=16"></script>
+<script src="cart.js?v=17"></script>
 <script src="view-toggle.js"></script>
 <script src="drag-scroll.js"></script>
 </body>
