@@ -421,7 +421,7 @@ window.addToCart = function() {
   if (!p) return;
 
   if (p.is_tshirt && !window._tshirtPhoto) {
-    alert('Por favor, envie uma foto para a estampa da camiseta!');
+    izaToast('Envie uma foto para a estampa da camiseta para continuar.');
     return;
   }
 
@@ -570,7 +570,7 @@ window.saveCardMessage = function() {
   const msg  = (document.getElementById('cmMsg')  || {}).value?.trim();
   const from = (document.getElementById('cmFrom') || {}).value?.trim() || 'Seu admirador(a)';
 
-  if (!msg) { alert('Escreva uma mensagem para o cartão!'); return; }
+  if (!msg) { izaToast('Escreva uma mensagem para o cartão.'); return; }
 
   const full = `Para: ${to}\n\n${msg}\n\nCom carinho,\n${from}`;
   CART.cardMessage = full;
@@ -647,9 +647,9 @@ window.selectPaper = function(id, label) {
 };
 
 window.savePremiumCard = function() {
-  if (!window._selectedPaper) { alert('Escolha o tipo de papel!'); return; }
+  if (!window._selectedPaper) { izaToast('Escolha o tipo de papel.'); return; }
   const msg  = (document.getElementById('pm2Msg')  || {}).value?.trim();
-  if (!msg) { alert('Escreva uma mensagem!'); return; }
+  if (!msg) { izaToast('Escreva uma mensagem.'); return; }
 
   CART.premiumCardData = {
     paper: window._selectedPaper,
@@ -873,7 +873,7 @@ function renderCartSheet() {
         Seu Carrinho
       </h2>
       <div class="cart-header-btns">
-        ${items.length > 0 ? `<button class="cart-clear-btn" onclick="if(confirm('Limpar carrinho?'))cartClear()">Limpar</button>` : ''}
+        ${items.length > 0 ? `<button class="cart-clear-btn" onclick="izaConfirm('Deseja limpar o carrinho?', cartClear)">Limpar</button>` : ''}
         <button onclick="closeOverlay('cartSheet')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
@@ -2419,7 +2419,7 @@ window.addTshirtToCartDetailPage = function(buyNow) {
   if (!p) return;
 
   if (!window._tshirtPhotoDetail) {
-    alert('Por favor, envie uma foto para a estampa da camiseta!');
+    izaToast('Envie uma foto para a estampa da camiseta para continuar.');
     return;
   }
 
@@ -2694,15 +2694,15 @@ window.addAllianceToCartDetailPage = function(buyNow) {
   if (!p) return;
 
   if (!window._allianceMaleSize) {
-    alert('Por favor, selecione o aro do anel masculino!');
+    izaToast('Selecione o aro do anel masculino.');
     return;
   }
   if (!window._allianceFemaleSize) {
-    alert('Por favor, selecione o aro do anel feminino!');
+    izaToast('Selecione o aro do anel feminino.');
     return;
   }
   if (!window._allianceSolitaireSize) {
-    alert('Por favor, selecione o aro do anel solitário!');
+    izaToast('Selecione o aro do anel solitário.');
     return;
   }
 
