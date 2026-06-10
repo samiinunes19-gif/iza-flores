@@ -1343,6 +1343,9 @@ window.goToPayment = function() {
   document.getElementById('coStep2').style.display = '';
   updateCoSteps(2);
   document.querySelector('.co-body').scrollTop = 0;
+
+  // Pré-aquece a função do PIX (evita cold start na hora de confirmar).
+  try { fetch((window.PIX_API_BASE || '') + '/api/pix-create', { method: 'GET', cache: 'no-store' }).catch(function () {}); } catch (e) {}
 };
 
 window.backToStep1 = function() {
@@ -1451,6 +1454,24 @@ window.confirmOrder = function() {
   showPixScreen();
 };
 
+// Gera o QR Code do PIX NO NAVEGADOR (instantâneo, sem requisição externa).
+// Fallback para imagem do gateway / serviço externo se a lib não estiver disponível.
+function renderPixQr(qr, code, url) {
+  try {
+    if (typeof qrcode === 'function' && code) {
+      const q = qrcode(0, 'M');
+      q.addData(code);
+      q.make();
+      qr.innerHTML = q.createImgTag(5, 4);
+      const im = qr.querySelector('img');
+      if (im) { im.style.width = '180px'; im.style.height = '180px'; im.alt = 'QR Code PIX'; }
+      return;
+    }
+  } catch (e) {}
+  const src = url || ('https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(code));
+  qr.innerHTML = '<img src="' + src + '" alt="QR Code PIX" style="width:180px;height:180px">';
+}
+
 // Base do backend (mesmo domínio na Vercel). Pode ser sobrescrito com window.PIX_API_BASE.
 async function showPixScreen() {
   document.getElementById('coStep2').style.display = 'none';
@@ -1499,11 +1520,7 @@ async function showPixScreen() {
     window._pixCode = data.qrCode;          // copia-e-cola real
     window._pixTxId = data.id;
     if (codeEl) codeEl.textContent = data.qrCode;
-    if (qr) {
-      const src = data.qrCodeUrl
-        || ('https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(data.qrCode));
-      qr.innerHTML = `<img src="${src}" alt="QR Code PIX" style="width:180px;height:180px">`;
-    }
+    if (qr) renderPixQr(qr, data.qrCode, data.qrCodeUrl);
     startPixPolling(data.id);
   } catch (e) {
     if (codeEl) codeEl.textContent = '';
