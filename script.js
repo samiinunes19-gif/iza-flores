@@ -19,6 +19,33 @@ const CATEGORIES = [
 ];
 
 // ═══════════════════════════════════════════════════════
+//  SLUGS DE URL POR CATEGORIA (para sitelinks do Google Ads)
+//  Cada categoria abre em https://izafloreseamores.site/<slug>
+// ═══════════════════════════════════════════════════════
+const CAT_SLUGS = {
+  31: 'dia-dos-namorados',
+  27: 'flores-e-chocolate',
+  25: 'buques-de-rosas',
+  23: 'kits-especiais',
+  22: 'cestas-romanticas',
+  32: 'ursos-de-pelucia',
+  19: 'cesta-cafe-da-manha',
+  21: 'buque-e-presente',
+  26: 'arranjos-em-vaso',
+  24: 'para-homens',
+  28: 'rosas-encantadas',
+  29: 'flores-plantadas',
+  20: 'cafe-saudavel',
+  30: 'flores-silvestres',
+};
+function slugForCat(id) { return CAT_SLUGS[id] || ('categoria-' + id); }
+function catForSlug(slug) {
+  slug = String(slug || '').toLowerCase();
+  for (const k in CAT_SLUGS) { if (CAT_SLUGS[k] === slug) return parseInt(k, 10); }
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════
 //  POOL DE IMAGENS — substitui cestasfeitacomamor.top
 //  (esse servidor retorna a mesma foto pra todos os produtos)
 // ═══════════════════════════════════════════════════════
@@ -136,6 +163,8 @@ function showPage(id) {
   // Bolinha "Loja aberta" só na página principal
   const fl = document.getElementById('openFloat');
   if (fl) fl.style.display = (id === 'homePage') ? 'flex' : 'none';
+  // Volta a URL para "/" ao exibir a home (sem criar histórico)
+  if (id === 'homePage') { try { history.replaceState(history.state, '', '/'); } catch (e) {} }
 }
 
 // Indicador flutuante "Loja aberta" — interação ao clicar
@@ -171,6 +200,8 @@ function openCategory(catId) {
   document.getElementById('catPageGrid').innerHTML = items.map(p => makeCard(p)).join('');
 
   showPage('categoryPage');
+  // Atualiza a URL para o slug da categoria (sem criar histórico) — p/ sitelinks
+  try { history.replaceState(history.state, '', '/' + slugForCat(catId)); } catch (e) {}
 }
 
 document.getElementById('catBackBtn').addEventListener('click', () => {
@@ -671,4 +702,13 @@ function initCitiesDirectory() {
   // Initialize Popular Tags & Cities
   initPopularTags();
   initCitiesDirectory();
+
+  // ROTEAMENTO POR URL — se a pessoa entrar em /<slug> (ex.: sitelink do Google Ads),
+  // abre direto a categoria correspondente.
+  (function routeFromUrl() {
+    const slug = (location.pathname || '/').replace(/^\/+|\/+$/g, '').toLowerCase();
+    if (!slug) return;
+    const catId = catForSlug(slug);
+    if (catId) { try { openCategory(catId); } catch (e) {} }
+  })();
 })();
