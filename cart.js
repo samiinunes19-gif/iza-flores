@@ -1103,7 +1103,7 @@ function openCheckout() {
           <div class="co-section-title">Forma de pagamento</div>
           <div class="co-pay-opt" id="pay-pix" onclick="selectPayment('pix')">
             <div class="co-pay-icon">
-              <img src="https://logospng.org/download/pix/logo-pix-icone-512.png" width="28" height="28" alt="PIX">
+              <img src="img/aada54acf670844f.png" width="28" height="28" alt="PIX">
             </div>
             <div class="co-pay-info"><div class="co-pay-name">PIX</div><div class="co-pay-sub" style="color:#4db6ac">Pagamento instantâneo</div></div>
             <div class="co-radio-dot" id="rp-pix"></div>
@@ -2585,10 +2585,10 @@ window.openDetail = function(id) {
 
       // Solitários com imagens reais do site usepersonalizado
       const solitaires = [
-        { name: 'Classic', priceLabel: 'GRÁTIS', price: 0, img: 'https://cdn.awsli.com.br/300x300/2959/2959406/produto/399631237/par-de-aliancas-mora-2mm-de-namoro-anel-solitario-classic-em-prata-950-3ee23a5c-uxbvtl36b8.png' },
-        { name: 'Grécia', priceLabel: '+ R$ 169,00', price: 169.00, img: 'https://cdn.awsli.com.br/300x300/2959/2959406/produto/399631272/par-de-aliancas-jasmim-2mm-de-namoro-anel-solitario-prata-950-818a8345-7wz8be9asg.png' },
-        { name: 'Marte', priceLabel: '+ R$ 169,00', price: 169.00, img: 'https://cdn.awsli.com.br/300x300/2959/2959406/produto/399631405/aliancas-de-namoro-prata-950-com-anel-solitario-de-compromisso-reta-2mm-polida-c-3jz56mfdcj.png' },
-        { name: 'Luxo', priceLabel: '+ R$ 169,00', price: 169.00, img: 'https://cdn.awsli.com.br/300x300/2959/2959406/produto/399631414/par-de-aliancas-de-namoro-prata-950-com-anel-solitario-de-compromisso-2mm-diaman-mf80rmwxzo.jpeg' }
+        { name: 'Classic', priceLabel: 'GRÁTIS', price: 0, img: 'img/8b75c3f290897476.png' },
+        { name: 'Grécia', priceLabel: '+ R$ 169,00', price: 169.00, img: 'img/f88e25791a360357.png' },
+        { name: 'Marte', priceLabel: '+ R$ 169,00', price: 169.00, img: 'img/f78e9bc739ea10e6.png' },
+        { name: 'Luxo', priceLabel: '+ R$ 169,00', price: 169.00, img: 'img/114440ada0b514c4.jpeg' }
       ];
 
       const solitairesHtml = solitaires.map((s, idx) => `

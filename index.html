@@ -10,44 +10,40 @@
 <!-- Performance 4G: conexões antecipadas + pré-carregar o banner principal (LCP) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="dns-prefetch" href="https://static.giulianaflores.com.br">
-<link rel="dns-prefetch" href="https://www.isabelaflores.com">
-<link rel="dns-prefetch" href="https://cdn.shopify.com">
-<link rel="dns-prefetch" href="https://acdn-us.mitiendanube.com">
-<link rel="preload" as="image" href="banner-hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="hero-banner.jpg" fetchpriority="high">
 
 <!-- ============================================================= -->
 <!--  METADADOS — PERSONALIZE ESTE BLOCO EM CADA SITE (escala lateral)
      Para não "cruzar dados" no Google, troque em cada clone:
-       • BRAND  = nome da loja          (ex.: Amores de Flores)
-       • DOMAIN = domínio do site        (ex.: https://amordeflores.site)
+       • BRAND  = nome da loja          (ex.: Floricultura Ana e Amores)
+       • DOMAIN = domínio do site        (ex.: https://floricultura-ana-amores.site)
        • title / description / keywords  (reescreva, não copie igual)
        • og:url e og:image (use o domínio do clone)
      NÃO repita o mesmo título/descrição entre os sites.            -->
 <!-- ============================================================= -->
 
-<title>Amores de Flores | Buquês, Cestas e Presentes com Entrega Rápida</title>
-<meta name="description" content="Na Amores de Flores você encontra buquês de rosas, arranjos, cestas e ursos para surpreender quem você ama. Entrega no mesmo dia e pagamento via PIX. Faça seu pedido agora.">
+<title>Floricultura Ana e Amores | Buquês, Cestas e Presentes com Entrega Rápida</title>
+<meta name="description" content="A Floricultura Ana e Amores é um marketplace que conecta você às melhores floriculturas de cada região do Brasil. Buquês, cestas e presentes com entrega rápida em diversas cidades. Peça já.">
 <meta name="keywords" content="entrega de flores, buquê de rosas vermelhas, cesta romântica, flores com chocolate, urso de pelúcia, comprar flores online, presente dia dos namorados">
-<meta name="author" content="Amores de Flores">
+<meta name="author" content="Floricultura Ana e Amores">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#e91e8c">
-<link rel="canonical" href="https://amordeflores.site/">
+<link rel="canonical" href="https://floricultura-ana-amores.site/">
 
 <!-- Open Graph (Facebook / WhatsApp) -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Amores de Flores">
-<meta property="og:title" content="Amores de Flores | Flores e Presentes para Surpreender">
-<meta property="og:description" content="Buquês, cestas, ursos e arranjos com entrega rápida e PIX. Mande flores e surpreenda hoje mesmo.">
-<meta property="og:url" content="https://amordeflores.site/">
-<meta property="og:image" content="https://amordeflores.site/banner-hero.jpg">
+<meta property="og:site_name" content="Floricultura Ana e Amores">
+<meta property="og:title" content="Floricultura Ana e Amores | Flores e Presentes para Surpreender">
+<meta property="og:description" content="Marketplace que conecta você às melhores floriculturas de cada região do Brasil. Entrega rápida de buquês, cestas e presentes em diversas cidades.">
+<meta property="og:url" content="https://floricultura-ana-amores.site/">
+<meta property="og:image" content="https://floricultura-ana-amores.site/hero-banner.jpg">
 <meta property="og:locale" content="pt_BR">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amores de Flores | Mande Flores e Surpreenda">
-<meta name="twitter:description" content="Buquês de rosas, cestas e ursos com entrega no mesmo dia e pagamento via PIX.">
-<meta name="twitter:image" content="https://amordeflores.site/banner-hero.jpg">
+<meta name="twitter:title" content="Floricultura Ana e Amores | Mande Flores e Surpreenda">
+<meta name="twitter:description" content="Marketplace de flores que conecta você às melhores floriculturas da sua região, com entrega rápida em diversas cidades.">
+<meta name="twitter:image" content="https://floricultura-ana-amores.site/hero-banner.jpg">
 
 <!-- Favicon inline (sem arquivo externo, evita 404 e footprint compartilhado) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E">
@@ -56,17 +52,17 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Florist",
-  "name": "Amores de Flores",
-  "description": "Loja de flores online: buquês, cestas, arranjos e ursos com entrega no mesmo dia e pagamento via PIX.",
-  "url": "https://amordeflores.site/",
-  "image": "https://amordeflores.site/banner-hero.jpg",
+  "@type": "OnlineStore",
+  "name": "Floricultura Ana e Amores",
+  "description": "Marketplace de flores e presentes que conecta os clientes às melhores floriculturas locais de cada região do Brasil, com entrega rápida em diversas cidades.",
+  "url": "https://floricultura-ana-amores.site/",
+  "image": "https://floricultura-ana-amores.site/hero-banner.jpg",
   "priceRange": "$$",
-  "areaServed": "BR"
+  "areaServed": { "@type": "Country", "name": "Brasil" }
 }
 </script>
 
-<link rel="stylesheet" href="style.css?v=21">
+<link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 <!-- Alternador de visualização PC / Celular -->
@@ -101,7 +97,7 @@
         <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
-    <a href="#" class="header-logo">Amores&nbsp;de&nbsp;<span>Flores</span></a>
+    <a href="#" class="header-logo"><span>Floricultura</span>&nbsp;Ana&nbsp;e&nbsp;Amores</a>
     <div class="header-actions">
       <button class="hbtn" id="searchBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
       <button class="hbtn" id="cartBtn" aria-label="Carrinho" onclick="openCartSheet()" style="position:relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span id="cartBadge" style="position:absolute;top:-6px;right:-6px;background:#e91e8c;color:white;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center">0</span></button>
@@ -109,27 +105,20 @@
   </header>
 
 
-  <div class="region-bar">
-    <span class="region-bar-icon"></span>
-    Entregamos hoje em sua região!
-  </div>
-
-  <section class="hero-carousel" id="heroCarousel">
-    <div class="hero-carousel-track" id="heroTrack">
-      <div class="hero-carousel-slide">
-        <img src="banner-hero.jpg" alt="Dia dos Namorados - Amores de Flores" class="hero-carousel-img" width="1024" height="466" fetchpriority="high" decoding="async">
-      </div>
-      <div class="hero-carousel-slide">
-        <img src="banner-hero-2.jpg" alt="Cestas de Café da Manhã Especial" class="hero-carousel-img" width="1024" height="492" loading="lazy" decoding="async">
-      </div>
-      <div class="hero-carousel-slide">
-        <img src="banner-hero-3.jpg" alt="O melhor Presente para Namorados" class="hero-carousel-img" width="1024" height="473" loading="lazy" decoding="async">
-      </div>
+  <section class="rhero">
+    <div class="rhero-banner">
+      <img class="rhero-banner-img" src="hero-banner.jpg" alt="Dia dos Namorados — Floricultura Ana e Amores" width="640" height="267" fetchpriority="high">
+      <span class="rhero-open"><span class="rhero-open-dot"></span> ABERTO AGORA</span>
     </div>
-    <div class="hero-carousel-dots" id="heroDots">
-      <span class="hero-dot active" onclick="setHeroSlide(0)"></span>
-      <span class="hero-dot" onclick="setHeroSlide(1)"></span>
-      <span class="hero-dot" onclick="setHeroSlide(2)"></span>
+    <div class="rhero-card">
+      <div class="rhero-logo"><img src="logo-loja.jpg" alt="Floricultura Ana e Amores"></div>
+      <h1 class="rhero-name">Floricultura Ana e Amores
+        <svg class="rhero-verified" viewBox="0 0 20 20" fill="currentColor" aria-label="Verificada"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+      </h1>
+      <div class="rhero-line"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 1 8 8c0 5.4-6.4 11.2-7.3 12s-.7.7-1.4 0C10.4 21.2 4 15.4 4 10a8 8 0 0 1 8-8m0 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg> Entregamos agora na sua região!</div>
+      <div class="rhero-line rhero-line-sm"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> Entrega até 35 minutos!</div>
+      <div class="rhero-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><b>4,9</b><span>(2.184 avaliações)</span></div>
+      <div class="rhero-pill"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 1 8 8c0 5.4-6.4 11.2-7.3 12s-.7.7-1.4 0C10.4 21.2 4 15.4 4 10a8 8 0 0 1 8-8m0 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg> Floricultura mais próxima <span class="rhero-dot">•</span> <span class="rhero-free"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19l12-12-1.4-1.4z"/></svg> Entrega Grátis</span></span></div>
     </div>
   </section>
 
@@ -148,66 +137,27 @@
 
   <div class="promo"><h3>&#127800; ENTREGA NO MESMO DIA</h3><p>Peça até hoje e receba hoje em sua cidade</p></div>
 
-  <div class="tags-sec">
-    <div class="tags-ttl">Termos Populares</div>
-    <div class="tags-wrap">
-      <span class="tag">Floricultura Ribeirão Preto</span>
-      <span class="tag">Cesta de Café da Manhã</span>
-      <span class="tag">Cesta de Chocolate</span>
-      <span class="tag">Urso de Pelúcia</span>
-      <span class="tag">Floricultura Manaus</span>
-      <span class="tag">Orquídeas</span>
-      <span class="tag">Rosas Brancas</span>
-      <span class="tag">Floricultura Brasília</span>
-      <span class="tag">Arranjo de Flores</span>
-      <span class="tag">Floricultura Curitiba</span>
-      <span class="tag">Floricultura Porto Alegre</span>
-      <span class="tag">Floricultura Osasco</span>
-      <span class="tag">Buquê de Rosas Vermelhas</span>
-      <!-- Extra tags hidden by default -->
-      <span class="tag tag-extra hidden">Floricultura Belo Horizonte</span>
-      <span class="tag tag-extra hidden">Floricultura Salvador</span>
-      <span class="tag tag-extra hidden">Floricultura Fortaleza</span>
-      <span class="tag tag-extra hidden">Floricultura Goiânia</span>
-      <span class="tag tag-extra hidden">Floricultura Recife</span>
-      <span class="tag tag-extra hidden">Floricultura Campinas</span>
-      <span class="tag tag-extra hidden">Floricultura São Luís</span>
-      <span class="tag tag-extra hidden">Floricultura Maceió</span>
-      <span class="tag tag-extra hidden">Floricultura Natal</span>
-      <span class="tag tag-extra hidden">Floricultura João Pessoa</span>
-      <span class="tag tag-extra hidden">Floricultura Teresina</span>
-      <span class="tag tag-extra hidden">Floricultura Santos</span>
-      <span class="tag tag-extra hidden">Floricultura São José dos Campos</span>
-      <span class="tag tag-extra hidden">Floricultura Niterói</span>
-      <span class="tag tag-extra hidden">Floricultura Joinville</span>
-      <span class="tag tag-extra hidden">Floricultura Londrina</span>
-      <span class="tag tag-extra hidden">Floricultura Caxias do Sul</span>
-    </div>
-    <span class="tags-more" id="btnTagsMore">Ver mais</span>
-  </div>
-
-  <div class="palavras">
-    <div class="palavras-ttl">Palavras Mais Buscadas</div>
-    <div class="palavras-grid">
-      <div class="pcol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg><a href="#">Floricultura Curitiba</a><a href="#">Floricultura Goiânia</a><a href="#">Floricultura BH</a><a href="#">Floricultura Fortaleza</a><a href="#">Floricultura Campinas</a></div>
-      <div class="pcol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg><a href="#">Floricultura SP</a><a href="#">Floricultura Blumenau</a><a href="#">Floricultura Caxias do Sul</a><a href="#">Floricultura RJ</a><a href="#">Floricultura Sorocaba</a></div>
-      <div class="pcol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg><a href="#">Floricultura Canoas</a><a href="#">Floricultura Araraquara</a><a href="#">Floricultura Salvador</a><a href="#">Floricultura Ribeirão Preto</a><a href="#">Rosas</a></div>
-    </div>
-  </div>
-
   <footer class="footer">
-    <span class="foot-logo">amores de flores</span>
-    <div class="foot-row"><a href="#" id="btnCidadesAtendidas">Confira as Cidades Atendidas</a></div>
-    <div class="foot-row"><a href="#">Termos de Uso</a><span class="s">•</span><a href="#">Devoluções e Reembolsos</a><span class="s">•</span><a href="#">SAC</a></div>
-    <div class="foot-row"><a href="#">Quem Somos</a><span class="s">•</span><a href="#">Política de Privacidade</a><span class="s">•</span><a href="#">Política de Cookies</a></div>
-    <div class="foot-row"><a href="#">Corporativo</a></div>
-    <div class="foot-socials">
-      <a href="#" class="soc" style="background:#1877f2"><svg viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-      <a href="#" class="soc" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"><svg viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="white" stroke-width="1.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/></svg></a>
-      <a href="#" class="soc" style="background:#111"><svg viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25z"/></svg></a>
-      <a href="#" class="soc" style="background:#25d366"><svg viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+    <div class="foot-trust">
+      <div class="foot-trust-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span>Compra<br>100% segura</span></div>
+      <div class="foot-trust-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>PIX e<br>Cartão</span></div>
+      <div class="foot-trust-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22c4-3 7-7 7-11a7 7 0 10-14 0c0 4 3 8 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg><span>Floriculturas<br>parceiras</span></div>
     </div>
-    <div class="foot-copy">© 2026 Amores de Flores. Todos os direitos reservados.</div>
+
+    <div class="foot-brand">Floricultura Ana e Amores</div>
+    <p class="foot-desc">Marketplace que conecta você às melhores floriculturas locais de cada região do Brasil — flores frescas, entrega rápida e atendimento em diversas cidades.</p>
+
+    <nav class="foot-links">
+      <a href="#" onclick="openPolicy('quem-somos');return false;">Quem Somos</a>
+      <a href="#" onclick="openPolicy('termos-de-uso');return false;">Termos de Uso</a>
+      <a href="#" onclick="openPolicy('politica-de-privacidade');return false;">Privacidade</a>
+      <a href="#" onclick="openPolicy('trocas-e-devolucoes');return false;">Trocas e Devoluções</a>
+      <a href="#" onclick="openPolicy('politica-de-cookies');return false;">Cookies</a>
+      <a href="#" id="btnCidadesAtendidas">Cidades Atendidas</a>
+      <a href="#" onclick="openPolicy('sac');return false;">SAC</a>
+    </nav>
+
+    <div class="foot-copy">© 2026 Floricultura Ana e Amores · Todos os direitos reservados</div>
   </footer>
 </div>
 
@@ -239,6 +189,17 @@
   </div>
   <div class="cat-page-count" id="catPageCount"></div>
   <div class="cat-page-grid" id="catPageGrid"></div>
+</div>
+
+<!-- PÁGINA DE POLÍTICAS / INSTITUCIONAL (marketplace) -->
+<div class="page" id="policyPage">
+  <div class="cat-page-bar">
+    <button class="cat-page-back" id="policyBackBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <span class="cat-page-title" id="policyTitle"></span>
+  </div>
+  <div class="policy-content" id="policyContent"></div>
 </div>
 
 <!-- CIDADES ATENDIDAS MODAL (Google SEO e verificação do usuário) -->
@@ -328,22 +289,17 @@
 </div>
 
 <div class="cookie" id="cookieBanner">
-  <p>Amores de Flores e os cookies: Nós usamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <a href="#">Política de Privacidade</a> e <a href="#">Política de Cookies</a>.</p>
+  <p>Floricultura Ana e Amores e os cookies: Nós usamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <a href="#" onclick="openPolicy('politica-de-privacidade');return false;">Política de Privacidade</a> e <a href="#" onclick="openPolicy('politica-de-cookies');return false;">Política de Cookies</a>.</p>
   <button class="cookie-btn" id="cookieBtn">Continuar e Fechar</button>
 </div>
 
-<!-- Indicador flutuante "Loja aberta" — segue o cliente pela página -->
-<div class="open-float" id="openFloat" title="Estamos abertos agora!">
-  <span class="open-float-dot"></span>
-  <span class="open-float-txt">Loja aberta</span>
-</div>
-
-<script src="products-data.js?v=2"></script>
-<script src="extra-products.js?v=12"></script>
-<script src="script.js?v=11"></script>
+<script src="products-data.js?v=3"></script>
+<script src="extra-products.js?v=13"></script>
+<script src="script.js?v=19"></script>
+<script src="policies.js?v=3"></script>
 <script src="ui-notify.js?v=1"></script>
 <script src="qrcode.min.js?v=1"></script>
-<script src="cart.js?v=21"></script>
+<script src="cart.js?v=25"></script>
 <script src="view-toggle.js"></script>
 <script src="drag-scroll.js"></script>
 <script src="back-button.js?v=1"></script>

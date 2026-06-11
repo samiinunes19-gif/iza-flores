@@ -1,0 +1,1 @@
+﻿https://static.giulianaflores.com.br/images/product/${id}gg.jpg?ims=300x300`;
