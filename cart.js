@@ -1695,15 +1695,15 @@ window.sendWhatsApp = function() {
 .pm-qty span{font-size:16px;font-weight:700;min-width:20px;text-align:center}
 .pm-add-btn{
   flex:1;padding:13px;border-radius:8px;
-  background:#e91e8c;color:white;border:none;
+  background:#16a34a;color:white;border:none;
   font-weight:800;font-size:14px;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:8px;
   transition:box-shadow .2s,transform .15s,background .2s;
   font-family:'Plus Jakarta Sans',sans-serif;
-  box-shadow:0 4px 14px rgba(233,30,140,.28);
+  box-shadow:0 4px 14px rgba(22,163,74,.28);
   letter-spacing:.2px;
 }
-.pm-add-btn:hover{background:#c2185b;box-shadow:0 6px 20px rgba(233,30,140,.42);transform:translateY(-1px)}
+.pm-add-btn:hover{background:#15803d;box-shadow:0 6px 20px rgba(22,163,74,.42);transform:translateY(-1px)}
 
 /* ── CARD MESSAGE MODAL ── */
 .card-modal-sheet{max-height:92vh;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif}
@@ -1763,13 +1763,13 @@ window.sendWhatsApp = function() {
 .cm-footer{padding:14px 18px;border-top:1px solid #f4f6f8;background:#fff;flex-shrink:0}
 .cm-save-btn{
   width:100%;padding:15px;border-radius:8px;
-  background:#e91e8c;color:white;border:none;
+  background:#16a34a;color:white;border:none;
   font-size:14px;font-weight:800;cursor:pointer;
   font-family:'Plus Jakarta Sans',sans-serif;
   letter-spacing:.3px;transition:box-shadow .2s,transform .15s;
-  box-shadow:0 4px 14px rgba(233,30,140,.28);
+  box-shadow:0 4px 14px rgba(22,163,74,.28);
 }
-.cm-save-btn:hover{box-shadow:0 6px 20px rgba(233,30,140,.38);transform:translateY(-1px)}
+.cm-save-btn:hover{box-shadow:0 6px 20px rgba(22,163,74,.38);transform:translateY(-1px)}
 .cm-save-btn:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
 
 
@@ -1797,14 +1797,14 @@ window.sendWhatsApp = function() {
 .us-footer{padding:12px 16px;border-top:1px solid #f3f4f6;flex-shrink:0}
 .us-continue-btn{
   width:100%;padding:14px;border-radius:8px;
-  background:#e91e8c;color:white;border:none;
+  background:#16a34a;color:white;border:none;
   font-size:14px;font-weight:800;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:8px;
   font-family:'Plus Jakarta Sans',sans-serif;
-  box-shadow:0 4px 14px rgba(233,30,140,.28);
+  box-shadow:0 4px 14px rgba(22,163,74,.28);
   transition:box-shadow .2s,transform .15s,background .2s;
 }
-.us-continue-btn:hover{background:#c2185b;box-shadow:0 6px 20px rgba(233,30,140,.42);transform:translateY(-1px)}
+.us-continue-btn:hover{background:#15803d;box-shadow:0 6px 20px rgba(22,163,74,.42);transform:translateY(-1px)}
 .us-footer-link{text-align:center;margin-top:6px}
 
 /* ── CART SHEET ── */
@@ -1840,13 +1840,13 @@ window.sendWhatsApp = function() {
 .cart-total-val{font-size:18px;font-weight:800;color:#22c55e}
 .cart-checkout-btn{
   width:100%;padding:14px;border-radius:8px;
-  background:#e91e8c;color:white;border:none;
+  background:#16a34a;color:white;border:none;
   font-size:14px;font-weight:800;cursor:pointer;
   font-family:'Plus Jakarta Sans',sans-serif;
-  box-shadow:0 4px 14px rgba(233,30,140,.28);
+  box-shadow:0 4px 14px rgba(22,163,74,.28);
   transition:box-shadow .2s,background .2s;
 }
-.cart-checkout-btn:hover{background:#c2185b;box-shadow:0 6px 20px rgba(233,30,140,.42)}
+.cart-checkout-btn:hover{background:#15803d;box-shadow:0 6px 20px rgba(22,163,74,.42)}
 .cart-checkout-btn.disabled{background:#e5e7eb;color:#9ca3af;cursor:default;box-shadow:none}
 
 /* ══════════════════════════════════════════════
@@ -1995,7 +1995,7 @@ window.sendWhatsApp = function() {
 .co-primary-btn{
   display:block;width:calc(100% - 36px);
   margin:18px 18px;padding:14px;
-  background:#e91e8c;color:white;border:none;
+  background:#16a34a;color:white;border:none;
   border-radius:8px;font-size:14px;font-weight:800;
   cursor:pointer;
   font-family:'Plus Jakarta Sans',sans-serif;
@@ -2003,7 +2003,7 @@ window.sendWhatsApp = function() {
   box-shadow:0 4px 16px rgba(233,30,140,.30);
   transition:box-shadow .2s,transform .15s,background .2s;
 }
-.co-primary-btn:hover{background:#c2185b;box-shadow:0 6px 22px rgba(233,30,140,.45);transform:translateY(-1px)}
+.co-primary-btn:hover{background:#15803d;box-shadow:0 6px 22px rgba(22,163,74,.45);transform:translateY(-1px)}
 
 /* Error */
 .co-error{

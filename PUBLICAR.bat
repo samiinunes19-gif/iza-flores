@@ -1,23 +1,28 @@
 @echo off
 chcp 65001 >nul
 cd /d "C:\Users\vv\Desktop\Monalisa-Flores-Site"
-echo ============================================
-echo   PUBLICANDO O SITE NO GITHUB (iza-flores)
-echo ============================================
-echo.
-echo [1/3] Adicionando arquivos...
+echo Publicando... aguarde.
+(
+echo ===== BRANCH =====
+git branch --show-current
+echo ===== REMOTE =====
+git remote -v
+echo ===== STATUS =====
+git status
+echo ===== ADD =====
 git add -A
-echo.
-echo [2/3] Criando commit...
-git commit -m "Site novo: imagens proprias, rodape novo, dados reais, dominio floricultura-ana-amores"
-echo.
-echo [3/3] Enviando para o GitHub (push)...
+echo ===== COMMIT =====
+git commit -m "Site novo: carrinho verde, imagens proprias, rodape novo, dominio floricultura-ana-amores"
+echo ===== PUSH =====
 git push
+echo ===== ULTIMO COMMIT =====
+git log -1 --oneline
+echo ===== FIM =====
+) > publicar-log.txt 2>&1
 echo.
 echo ============================================
-echo   Se NAO apareceu erro vermelho acima,
-echo   deu certo! O Vercel vai atualizar o site
-echo   em ~30 segundos. Recarregue o site depois.
+echo   PRONTO. Gerei o arquivo publicar-log.txt
+echo   Pode fechar esta janela e me avisar.
 echo ============================================
 echo.
 pause

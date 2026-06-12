@@ -148,7 +148,7 @@ function makeCard(p, extraClass) {
         <div class="pprice">${formatPrice(p.price)}<span class="pdot"></span></div>
         ${oldP}
         <div class="pname">${p.name}</div>
-        <button class="pbuy" type="button" onclick="event.stopPropagation(); quickBuy(${p.id})">Comprar agora</button>
+        <button class="pbuy" type="button" aria-label="Comprar" onclick="event.stopPropagation(); quickBuy(${p.id})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M1 1h4l2.3 12.4a2 2 0 0 0 2 1.6h9.1a2 2 0 0 0 2-1.6L23 6H6"/></svg></button>
       </div>
     </div>`;
 }
