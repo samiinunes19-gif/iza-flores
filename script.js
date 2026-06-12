@@ -20,7 +20,7 @@ const CATEGORIES = [
 
 // ═══════════════════════════════════════════════════════
 //  SLUGS DE URL POR CATEGORIA (para sitelinks do Google Ads)
-//  Cada categoria abre em https://izafloreseamores.site/<slug>
+//  Cada categoria abre em https://floricultura-dosamores.sbs/<slug>
 // ═══════════════════════════════════════════════════════
 const CAT_SLUGS = {
   31: 'dia-dos-namorados',

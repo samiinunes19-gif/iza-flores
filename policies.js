@@ -8,7 +8,7 @@
     nome: 'Floricultura Ana e Amores',
     razao: 'Floricultura Ana e Amores',
     cnpj: '49.684.515/0001-47',
-    email: 'contato@floricultura-ana-amores.site',
+    email: 'contato@floricultura-dosamores.sbs',
     whatsapp: '(27) 99978-5632',
     endereco: 'Avenida Guacuí, 1320 — Bairro Araçá, Linhares/ES — CEP 29901-394',
     cidade: 'Linhares — ES'

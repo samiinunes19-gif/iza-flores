@@ -1,0 +1,6 @@
+===== BRANCH =====
+main
+===== REMOTE =====
+origin	https://github.com/samiinunes19-gif/iza-flores.git (fetch)
+origin	https://github.com/samiinunes19-gif/iza-flores.git (push)
+===== STATUS =====
