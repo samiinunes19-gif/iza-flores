@@ -5,8 +5,8 @@
 
   // Dados administrativos reais (sede da empresa) — identificação exigida pelo Google Ads:
   var EMPRESA = {
-    nome: 'Floricultura Ana e Amores',
-    razao: 'Floricultura Ana e Amores',
+    nome: 'Floricultura dos Amores',
+    razao: 'Floricultura dos Amores',
     cnpj: '49.684.515/0001-47',
     email: 'contato@floricultura-dosamores.sbs',
     whatsapp: '(27) 99978-5632',
